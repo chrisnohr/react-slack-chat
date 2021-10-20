@@ -4,6 +4,7 @@ export default ({ apiToken, bot, channelFilter = [], defaultChannel }) => {
   return bot.conversations
     .list({
       token: apiToken,
+      limit: 999,
     })
     .then((payload) => {
       debugLog(payload);
